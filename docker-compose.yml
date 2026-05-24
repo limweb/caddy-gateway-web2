@@ -3,8 +3,8 @@ version: "3.8"
 services:
   shopsthai-web2:
     build:
-      context: ./vuepj
-      dockerfile: ../docker/Dockerfile
+      context: .
+      dockerfile: docker/Dockerfile
     image: "shopsthai-web2:alpine"
     labels:
       com.docker.compose.project: "shopsthai-web2"
