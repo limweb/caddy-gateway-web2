@@ -19,6 +19,6 @@ RUN bunx vite build
 
 FROM caddy:alpine
 COPY --from=builder /app/dist /srv/www/
-COPY Caddyfile /etc/caddy/Caddyfile
+COPY ../Caddyfile /etc/caddy/Caddyfile
 EXPOSE 8080
 CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
