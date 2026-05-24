@@ -2,7 +2,10 @@
 version: "3.8"
 services:
   shopsthai-web2:
-    image: "caddy:alpine"
+    build:
+      context: ./vuepj
+      dockerfile: ../docker/Dockerfile
+    image: "shopsthai-web2:alpine"
     labels:
       com.docker.compose.project: "shopsthai-web2"
       virtual.host: "web1.shopsthai.com"
