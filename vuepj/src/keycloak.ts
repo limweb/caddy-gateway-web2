@@ -12,7 +12,6 @@ export const isAuthenticated = ref(false);
 let isInitialized = false;
 
 export const initKeycloak = async () => {
-  debugger;
   if (isInitialized) return;
   isInitialized = true;
 
