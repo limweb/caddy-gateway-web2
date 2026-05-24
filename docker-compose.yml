@@ -10,7 +10,9 @@ services:
       virtual.port: "8080" 
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./dist:/srv/www
+      # - ./dist:/srv/www
+    env_file:
+      - .env
     environment:
       TZ: Asia/Bangkok
     logging:
