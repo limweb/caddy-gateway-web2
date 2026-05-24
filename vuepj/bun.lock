@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "web1-app",
+      "name": "web2-app",
       "dependencies": {
         "keycloak-js": "^23.0.0",
         "vue": "^3.4.0",

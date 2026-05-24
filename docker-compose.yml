@@ -8,7 +8,7 @@ services:
     image: "shopsthai-web2:alpine"
     labels:
       com.docker.compose.project: "shopsthai-web2"
-      virtual.host: "web1.shopsthai.com"
+      virtual.host: "web2.shopsthai.com"
       virtual.tls-email: limweb@hotmail.com
       virtual.port: "8080" 
     volumes:

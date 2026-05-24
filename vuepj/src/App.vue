@@ -68,7 +68,7 @@ const loadData = async () => {
 
 <template>
   <div class="container">
-    <h1>Web1 - Shopsthai</h1>
+    <h1>Web2 - Shopsthai</h1>
 
     <div v-if="!isAuthenticated" class="login-section">
       <p>กรุณาเข้าสู่ระบบ</p>
