@@ -5,6 +5,11 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
+      args:
+        VITE_SSO_AUTH_SERVER: ${VITE_SSO_AUTH_SERVER}
+        VITE_SSO_REALM: ${VITE_SSO_REALM}
+        VITE_SSO_CLIENTID: ${VITE_SSO_CLIENTID}
+        VITE_API_URL: ${VITE_API_URL}
     image: "shopsthai-web2:alpine"
     labels:
       com.docker.compose.project: "shopsthai-web2"
