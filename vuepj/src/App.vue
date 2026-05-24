@@ -10,6 +10,10 @@ import {
 
 const API_URL = import.meta.env.VITE_API_URL || "https://api.shopsthai.com";
 
+const ssoAuthServer = import.meta.env.VITE_SSO_AUTH_SERVER;
+const ssoRealm = import.meta.env.VITE_SSO_REALM;
+const ssoClientId = import.meta.env.VITE_SSO_CLIENTID;
+
 const userProfile = ref<any>(null);
 const apiData = ref<any>(null);
 const loading = ref(false);
@@ -73,6 +77,12 @@ const loadData = async () => {
     <div v-if="!isAuthenticated" class="login-section">
       <p>กรุณาเข้าสู่ระบบ</p>
       <button @click="login">Login with Keycloak</button>
+      <div class="debug-info">
+        <p><strong>Environment Variables:</strong></p>
+        <p>VITE_SSO_AUTH_SERVER: {{ ssoAuthServer }}</p>
+        <p>VITE_SSO_REALM: {{ ssoRealm }}</p>
+        <p>VITE_SSO_CLIENTID: {{ ssoClientId }}</p>
+      </div>
     </div>
 
     <div v-else class="content">
@@ -110,6 +120,18 @@ const loadData = async () => {
 .login-section {
   text-align: center;
   padding: 40px;
+}
+
+.debug-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.debug-info p {
+  margin: 5px 0;
 }
 
 .header {
